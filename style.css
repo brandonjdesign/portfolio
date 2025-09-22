@@ -1,7 +1,11 @@
 /*default*/
 
 	body {
-		font-family: 'Space Mono', sans-serif;
+		font-family: "Syne", sans-serif;
+		font-optical-sizing: auto;
+		/*font-weight: <weight>;
+		font-style: normal;*/
+		/*font-family: 'Space Mono', sans-serif;*/
 		letter-spacing: 0px;
 		background: #000;
 		color: #fff;
@@ -10,6 +14,7 @@
 
 	a {
 		color: #fff;
+		letter-spacing: 0.05em;
 		text-decoration: none;
 		/*opacity: 0.8;*/
 		-webkit-transition: all 0.3s ease;
@@ -50,9 +55,19 @@
 		/*font-weight: 700;*/
 	}
 
+	/*	#home #dollarama a {
+		color: #00FF0C;
+	}
+
+	#dollarama a.fill {
+		color: #00FF0C;
+		border-color: #00FF0C;
+	}
+	*/
 	.project-details-page .info ul li a, .project-details-page .modal a {
 		border-bottom: none;
 		text-decoration: underline;
+		color: #c2fffa;
 	}
 
 	.center-text {
@@ -84,7 +99,9 @@
 	h1 {
 		/*font-family: 'Space Mono', monospace;*/
 		font-size: 6em;
-		line-height: 1.2em;
+		font-weight: 700;
+		line-height: 0.8em;
+		letter-spacing: 0.05em;
 	}
 
 	ul {
@@ -296,6 +313,61 @@
 			border-bottom: none;
 		}
 
+/*alternating columns*/
+
+	.alternating-cols {
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 30px;
+	}
+
+	.ac-row {
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+		margin: 2rem 0;
+		gap: 2rem;
+		border-radius:30px;
+		border: 2px solid rgba(255,255,255,0.2);
+		overflow: hidden;
+	}
+
+	.ac-row.reverse {
+		flex-direction: row-reverse;
+	}
+
+	.ac-text {
+		margin: 1%;
+		/*margin: 0 auto;*/
+		display: flex;
+		justify-content: center;
+		/*align-self: center;*/
+		flex: 1;
+  		text-align: left;
+  		/*max-width: 30%;*/
+  		/*border-radius:30px;
+  		border: 2px solid rgba(255,255,255,0.2);*/
+	}
+
+	.act-inner {
+		align-self: center;
+		max-width: 66%;
+	}
+
+	.ac-img {
+		/*margin: 1%;*/
+		width: 48%;
+		height: 500px;
+		/*border: 2px solid rgba(255,255,255,0.1);*/
+		overflow:hidden;
+		/*border-radius:20px;*/
+		/*border-radius:0  30px 30px 0;*/
+		/*border: 2px solid rgba(255,255,255,0.2);*/
+		/*background: #fff;*/
+		/*display: block;*/
+	}
+
 /*nav*/
 
 	/*mob nav*/
@@ -308,6 +380,7 @@
 			display: block;
 			border-bottom: none;
 			line-height: 2em;
+			color: #c2fffa;
 		}
 
 		.mob-nav h2{
@@ -510,6 +583,11 @@
 			height: 70%;
 		}
 
+		.pp-pic {
+			background: url("img/pp-pic.png");
+			background-size: cover;
+		}
+
 		.dollaramadevice {
 			background: url("img/pdd.png");
 			background-size: cover;
@@ -568,7 +646,7 @@
 		.text {
 			position: absolute;
 			width: 100%;
-			max-width: 600px;
+			max-width: 570px;
 			top: 50%;
 			left: 0;
 			/*padding: 0 15px;*/
@@ -581,7 +659,9 @@
 
 		.text p {
 			font-size: 24px;
+			line-height: 1.6em;
 			margin:40px 0;
+			letter-spacing: 0.05em;
 			/*max-width: 460px;*/
 		}
 
@@ -589,10 +669,10 @@
 			font-size: 20px;
 			color: #777;
 			font-weight: 700;
-			letter-spacing: 10px;
+			letter-spacing: 0.25em;
 			padding: 0px !important;
-			margin-bottom: 20px;
-			margin-top: 0px !important;
+			margin-bottom: 2.4em;
+			margin-top: 0px;
 			text-transform: uppercase;
 			/*display: none;
 			opacity: 0;*/
@@ -678,7 +758,8 @@
 		}
 
 		#dollarama .deviceimg {
-			background: url("img/dollaramadevice.png");
+			background: url("img/sec-1.png");
+			/*background: url("img/dollaramadevice.png");*/
 			background-size: cover;
 		}
 
@@ -700,7 +781,8 @@
 		}
 
 		#watchparty .deviceimg {
-			background: url("img/watchpartydevice.png");
+			background: url("img/sec-2.png");
+			/*background: url("img/watchpartydevice.png");*/
 			background-size: cover;
 		}
 
@@ -734,12 +816,13 @@
 
 		#archives::after {
 			background: #121318;
-			background: url("img/archivebanner.png") center;
+			background: url("img/bg2.png") bottom;
 			background-size: cover;
 		}
 
 		#archives .deviceimg {
-			background: url("img/archivedevice.png");
+			background: url("img/sec-3.png");
+			/*background: url("img/archivedevice.png");*/
 			background-size: cover;
 		}
 
@@ -752,21 +835,61 @@
 		padding: 0 30px;
 	}
 
+	/*.img-tile .center-fill {
+		display: flex;
+		position: absolute;
+		top: 0;
+		justify-content: center;
+		align-items: center;
+		width: 100%; 
+		height: 100%;
+	}*/
+
+	.img-tile .fill {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		/*display: none;*/
+		opacity: 1;
+		border: none;
+		padding: 10px 15px;
+		color: #000;
+		/*background: #fff;*/
+		line-height: 1.6em;
+		/*color: rgba(255,255,255,0.2);*/
+		border-radius: 30px;
+		/*border: 2px solid #78FFF4;*/
+		/*border: 3px solid rgba(255,255,255,0.2);*/
+		color:#78FFF4;
+		border: 2.5px solid #78FFF4;
+		background:rgba(0,0,0,.55);
+		backdrop-filter:blur(4px);
+		transition: 0.3s all ease;
+		/*line-height: 3.6em;*/
+	}
+
 	.img-tile {
+		position: relative;
 		display: inline-block;
 		width: 29%;
 		padding-top: 29%;
 		background: #333;
 		margin: 1%;
-		border-radius: 10px;
+		border-radius: 20px;
 		cursor: pointer;
-		border: 2px solid rgba(255,255,255,0.1);
+		border: 2px solid rgba(255,255,255,0.2);
 		transition: 0.3s all ease;
 	}
 
 	.img-tiles .img-tile:hover {
 		opacity: 0.85;
-		border: 2px solid rgba(255,255,255,0.3);
+		border: 2px solid #78FFF4;
+	}
+
+	.img-tiles .img-tile:hover .fill {
+		opacity: 1;
+		/*color:#78FFF4;
+		border: 3px solid #78FFF4;*/
 	}
 
 	#aboutme .img-tiles .img-tile, #dollarama .img-tiles .img-tile, #watchparty .img-tiles .img-tile, #lilsite .img-tiles .img-tile {
@@ -782,15 +905,53 @@
 		display: block;
 	}
 
+	/*all*/
+		.recent-img-1 {
+			background: url("img/sec-1.png") #121318 center no-repeat;
+			/*background: url("websites/dollarama/img/pd/t8alt.png") center no-repeat;*/
+			background-size: cover;
+		}
+		.past-img-1 {
+			background: url("img/sec-2.png") #121318 top no-repeat;
+			/*background: url("websites/dollarama/img/pd/t8alt.png") center no-repeat;*/
+			background-size: 150%;
+		}
+		.fun-img-1 {
+			background: url("img/sec-3.png") #121318 top no-repeat;
+			/*background: url("websites/dollarama/img/pd/t8alt.png") center no-repeat;*/
+			background-size: 150%;
+		}
+		.dollarama-img-1 {
+			background: url("websites/dollarama/img/pd/t4.png") #121318 center no-repeat;
+			/*background: url("websites/dollarama/img/pd/t8alt.png") center no-repeat;*/
+			background-size: cover;
+		}
+		.watchparty-img-1 {
+			background: url("websites/watchparty/assets/pd/t7.png") center no-repeat;
+			/*background: url("websites/dollarama/img/pd/t8alt.png") center no-repeat;*/
+			background-size: cover;
+		}
+		.lilsite-img-1 {
+			background: url("websites/lilsite/img/pd/t1.png") #000 center no-repeat;
+			/*background: url("websites/dollarama/img/pd/t8alt.png") center no-repeat;*/
+			background-size: cover;
+		}
+		.wemakewebstuff-img-1 {
+			background: url("img/archive/1.png") center no-repeat;
+			/*background: url("websites/dollarama/img/pd/t8alt.png") center no-repeat;*/
+			background-size: cover;
+		}
 	/*about*/
 
 		#aboutme .img-tile.tile-1, #aboutme .tile-1 .img-tile {
-			background: url("websites/dollarama/img/pd/t8alt.png") center no-repeat;
+			background: url("img/sec-1.png") center no-repeat;
+			/*background: url("websites/dollarama/img/pd/t8alt.png") center no-repeat;*/
 			background-size: cover;
 		}
 
 		#aboutme .img-tile.tile-2, #aboutme .tile-2 .img-tile {
-			background: url("img/archive/1.png") center no-repeat;
+			background: url("img/sec-2.png") center no-repeat;
+			/*background: url("img/archive/1.png") center no-repeat;*/
 			background-size: cover;
 		}
 
@@ -800,7 +961,7 @@
 		}
 
 		#aboutme .img-tile.tile-4, #aboutme .tile-4 .img-tile {
-			background: url("img/archive/5.png") center no-repeat;
+			background: url("websites/watchparty/assets/pd/t1.png") center no-repeat; /*img/archive/5.png*/
 			background-size: cover;
 		}
 
@@ -1265,6 +1426,122 @@
 			width: 66.6666%;
 		}
 
+/*slideshow*/
+
+	.wrap{
+		height:100%;
+		/*display:flex;
+		align-items:center;
+		justify-content:center;
+		padding:24px;*/
+	}
+
+	/* Slideshow frame */
+	.slideshow{
+		height:100%;
+		position:relative;
+		/*width:min(860px,96vw);*/
+		width:100%;
+		/*overflow:hidden;
+		border-radius:20px;*/
+		border-left: 2px solid rgba(255,255,255,0.2);
+		/*box-shadow:0 8px 30px rgba(0,0,0,.12);*/
+		/*background:#000;*/
+	}
+	.reverse .slideshow {
+
+		border-left: none;
+		border-right: 2px solid rgba(255,255,255,0.2);
+	}
+
+	/* Slide stack */
+	.slides{
+		position:relative;
+		height:100%;
+		/*padding-bottom:56.25%; /* 16:9 aspect ratio; change as needed */*/
+	}
+
+	.slide{
+		position:absolute;
+		inset:0;
+		display:flex;
+		align-items:center;
+		justify-content:center;opacity:0;
+		pointer-events:none;
+		transition:opacity .45s ease;
+		/*border-radius: 30px;*/
+		/*overflow: hidden;*/
+	}
+
+	.slide img{
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		display:block
+	}
+
+	.slide.active{opacity:1;pointer-events:auto}
+
+	.slideBtns
+	{
+		position:absolute;
+		right:20px;
+		top:20px;
+	}
+	/* Single arrow button (on the right) */
+	.next-btn, .last-btn{
+		letter-spacing:0.05em;
+		font-family: "Syne", sans-serif;
+		font-size: 16px;
+		/*position:absolute;
+		right:0px;
+		top:0px;*/
+		/*transform:translateY(-50%);
+		top:50%;*/
+		/*right: -30px;*/
+		border: 2px solid #00F3D9;
+		background:rgba(0,0,0,.8);
+		backdrop-filter:blur(4px);
+		padding: 15px 25px;
+		/*background:rgba(255,255,255,.92);*/
+		/*width:48px;height:48px;*/
+		border-radius:30px 0px 0px 30px;
+		margin: 0;
+		color: #00F3D9;
+		display: inline-block;
+		/*place-items:center;*/
+		cursor:pointer;
+		/*box-shadow:0 4px 12px rgba(0,0,0,.14);*/
+	}
+	.next-btn{
+
+		border-radius:0px 30px 30px 0px;
+		margin-left: -2px;
+	}
+	/*.next-btn:active{*/
+		/*transform:translateY(-50%) scale(.98);*/
+		/*transform:scale(.98);*/
+	/*}*/
+	/*.next-btn svg{
+		width:18px;
+		height:18px;
+		display:block
+	}*/
+
+	/* Small caption area (optional) */
+	.caption{
+		letter-spacing:0.05em;
+		position:absolute;
+		left:12px;
+		bottom:12px;
+		background:rgba(0,0,0,.45);
+		color:#fff;
+		padding:8px 20px;
+		border-radius:30px;
+		font-size:14px;
+		backdrop-filter:blur(4px);
+	}
+
 /*project details page*/
 
 	.project-details-page .center-text {
@@ -1305,12 +1582,53 @@
 	}
 
 	.project-details-page .info {
-		padding: 60px 0 80px;
+		padding: 60px 0 20px;
 	}
 
 	.item {
 		width: 50%;
 		float: left;
+	}
+
+/*header*/
+	.header {
+		/*background: url("img/sec-2.png") right no-repeat;
+		background-size: cover;*/
+		position: absolute;
+		height: 700px;
+		width: 100%;
+		opacity: 0.2;
+	}
+
+	#aboutme .header {
+		background: url("img/watchpartybanner.png") top center;
+		background-size: top cover;
+		opacity: 1;
+	}
+
+	#fun .header {
+		background: url("img/sec-3.png") right no-repeat;
+		background-size: 55%;
+	}
+
+	#recent .header {
+		background: url("img/sec-1.png") right no-repeat;
+		background-size: top cover;
+	}
+
+	#past .header {
+		background: url("img/sec-2.png") right no-repeat;
+		background-size: 55%;
+	}
+
+	.header span {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to top, #000, transparent);
 	}
 
 /*footer*/
@@ -1349,6 +1667,12 @@
 
 	.footer  {
 		margin-top: 120px;
+	}
+
+	.footer .name {
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+		opacity: 0.6;
 	}
 
 	.footer h1 {
@@ -1392,23 +1716,23 @@
 		}
 
 		#watchparty .footer .deviceimg {
-			background: url("img/lilsitedevice.png") center;
+			background: url("img/dollaramadevice.png") center;
 			background-size: cover;
 		}
 
 	/*lilsite*/
 
-		#lilsite .next-project {
+		/*#lilsite .next-project {
 			background: url("img/archivebanner.png") center;
 			background-size: cover;
-		}
+		}*/
 
 		#lilsite .footer .deviceimg {
-			background: url("img/archivedevice.png") center;
+			background: url("img/watchpartydevice.png") center;
 			background-size: cover;
 		}
 
-	/*archive & about me*/
+	/*all*/
 
 		#archive .next-project {
 			background: url("img/dollaramabanner.png") center;
@@ -1420,20 +1744,41 @@
 			background-size: cover;
 		}
 
-		#aboutme .next-project {
+		/*#aboutme .next-project {
 			background: url("img/archivebanner.png") center;
 			background-size: cover;
-		}
+		}*/
 
 		#aboutme .footer .deviceimg {
-			background: url("img/archivedevice.png") center;
-			background-size: cover;
+			background: url("img/sec-1.png") top right no-repeat;
+			background-size: 100%;
+		}
+
+		#recent .footer .deviceimg {
+			background: url("img/sec-2.png") top right no-repeat;
+			background-size: 100%;
+
+		}
+
+		#past .footer .deviceimg {
+			background: url("img/sec-3.png") top right no-repeat;
+			background-size: 100%;
+
+		}
+
+		#fun .footer .deviceimg {
+			background: url("img/sec-2.png") top right no-repeat;
+			background-size: 100%;
 
 		}
 
 /*mobile*/
 
 	@media only screen and (max-width: 1500px) {
+
+		.text .name {
+			margin-top: 12px;
+		}	
 
 		.project-details-page .info {
 		    padding: 0;
@@ -1486,8 +1831,37 @@
 
 	@media only screen and (max-width: 1025px) {
 
+
+		.ac-row, .ac-row.reverse {
+			/*margin: 0;*/
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.ac-text {
+			/*margin: 10px;*/
+	  		width: 100%;
+	  		max-width: 100%;
+		}
+
+		.ac-img {
+			margin: 0;
+	  		width: 100%;
+		}
+
+		.slideshow{
+			border-top: 2px solid rgba(255,255,255,0.2);
+		}
+		.reverse .slideshow {
+			border:none;
+			border-top: 2px solid rgba(255,255,255,0.2);
+		}
+
 		.text .name {
-			display: none;
+			font-size: 16px;
+			margin-top: 15px;
+			margin-bottom: 20px;
+			/*display: none;*/
 		}
 
 		/*#home .project a.fill {
@@ -1559,6 +1933,10 @@
 
 		.project-details-page .info {
 			padding: 0 0 40px;
+		}
+
+		.project-details-page .text h1 {
+			margin-top: 20px;
 		}
 
 		#home .project {
