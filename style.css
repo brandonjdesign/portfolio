@@ -2060,9 +2060,7 @@
 
 	@media only screen and (max-width: 500px) {
 
-		
-
-		#about .deviceimg-container {
+/*		#about .deviceimg-container {
 		    right: 25%;
 		    bottom: 21.5%;
 		}
@@ -2075,10 +2073,10 @@
 		h1 {
 			font-size: 30px;
 		}
+*/
+	/*}*/
 
-	}
-
-	@media only screen and (max-width: 374px) {
+	/*@media only screen and (max-width: 374px) {*/
 		
 		h1 {
 			font-size: 24px;
