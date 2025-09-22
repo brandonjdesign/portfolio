@@ -106,15 +106,16 @@
 
 	ul {
 		list-style: none;
-		padding-left: 15px;
+		padding-left:1.4em;
 		line-height: 1.6em;
+
 	}
 
 	ul li{
 		padding-bottom: 12px;
 	}
 
-	ul li::before {
+	/*ul li::before {
 		font-weight: bold;
 		display: inline-block;
 		width: 0.8em;
@@ -122,6 +123,14 @@
 		font-size: 20px;
 		color: #00F3D9;
 		content: "\25AA";
+	}*/
+
+	ul li::marker {
+	  content: "\25AA\2002";   /* black small square */
+	  color: #00F3D9;
+	  font-size: 20px;
+	  font-weight: bold;
+	  /*margin-left: -0.8em;*/
 	}
 
 	ul.decimal {
