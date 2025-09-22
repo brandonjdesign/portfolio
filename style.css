@@ -357,8 +357,10 @@
 
 	.ac-img {
 		/*margin: 1%;*/
-		width: 48%;
-		height: 500px;
+		width: 50%;          /* or any fixed width you want */
+  		aspect-ratio: 16 / 12;
+		/*width: 48%;
+		height: 500px;*/
 		/*border: 2px solid rgba(255,255,255,0.1);*/
 		overflow:hidden;
 		/*border-radius:20px;*/
@@ -1913,15 +1915,15 @@
 		}
 
 		.img-tile {
-			width: 29%;
-			padding-top: 29%;
-			margin: 0.7%;
+			width: 47%;
+			padding-top: 48%;
+			margin:1% 1%;
 		}
 
 		#aboutme .img-tiles .img-tile, #dollarama .img-tiles .img-tile, #watchparty .img-tiles .img-tile, #lilsite .img-tiles .img-tile {
-			width: 30%;
-			padding-top: 30%;
-			margin: 0.3% 0.7%;
+			width: 47%;
+			padding-top: 48%;
+			margin:1% 1%;
 		}
 
 		.project-link {
@@ -2043,6 +2045,18 @@
 	    flex-direction: column;
 	  }
 
+	  .img-tile {
+			width: 100%;
+			padding-top: 100%;
+			margin:1% 0%;
+		}
+
+		#aboutme .img-tiles .img-tile, #dollarama .img-tiles .img-tile, #watchparty .img-tiles .img-tile, #lilsite .img-tiles .img-tile {
+			width: 100%;
+			padding-top: 100%;
+			margin:1% 0%;
+		}
+
 	  .info .col {
 	  	padding-right: 0;
 	  	padding-top: 5px;
@@ -2060,7 +2074,7 @@
 
 	@media only screen and (max-width: 500px) {
 
-/*		#about .deviceimg-container {
+	/*#about .deviceimg-container {
 		    right: 25%;
 		    bottom: 21.5%;
 		}
@@ -2073,7 +2087,7 @@
 		h1 {
 			font-size: 30px;
 		}
-*/
+	*/
 	/*}*/
 
 	/*@media only screen and (max-width: 374px) {*/
