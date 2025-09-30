@@ -827,7 +827,7 @@
 
 		#archives::after {
 			background: #121318;
-			background: url("img/bg2.png") bottom;
+			background: url("img/bg2.PNG") bottom;
 			background-size: cover;
 		}
 
